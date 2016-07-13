@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name = "viewport" content = "width = device-width , initial-scale=1.0">
+    <link href="./stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="./stylesheets/style.css" rel="stylesheet">
+    <script src="./javascripts/angular.min.js"></script>
+</head>
+<body>
+    <div class = "navbar navbar-default navbar-static-top">
+    </div>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-md-offset-3"> Join Twitter today.</h1>
+        </div>
+        <div class="row">
+            <form class="form-horizontal" action = "/editProfile" method = "post">
+                <div class = "form-group form-group-lg">
+                    <div class = "col-md-offset-3 col-md-6">
+                        <input type = text placeholder = "First Name" name = "firstName" class = "form-control" required>
+                    </div>
+                </div>
+                <div class = "form-group form-group-lg">
+                    <div class = "col-md-offset-3 col-md-6">
+                        <input type = text placeholder = "Last Name" name = "lastName" class = "form-control" required>
+                    </div>
+                </div>
+                <div class = "form-group form-group-lg">
+                    <label class="">Date of Birth</label>
+                    <div class = "col-md-offset-3 col-md-6">
+                        <input type = date placeholder = "Date Of Birth" name = "DOB" class = "form-control" required>
+                    </div>
+                </div>
+                <div class = "form-group form-group-lg">
+                    <div class = "col-md-offset-3 col-md-6">
+                        <button type = "submit" name = "signInBtn" class = "btn btn-primary form-control"> Update </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

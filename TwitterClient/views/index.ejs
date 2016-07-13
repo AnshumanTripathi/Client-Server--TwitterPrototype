@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html data-ng-app = "Twitter">
+<title>
+  Twitter
+</title>
+<head>
+  <meta name = "viewport" content = "width = device-width , initial-scale=1.0">
+  <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <script src="javascripts/angular.min.js"></script>
+</head>
+<body data-ng-controller="LoginController">
+<div class = "navbar navbar-default navbar-static-top">
+  <div class = "container">
+    <div class = "navbar-header pull-left">
+      <span class = "navbar-brand Icon"> <img src="https://www.cscglobal.com/service/images/TWITTER_bird-Logo_50.png"> </span>
+    </div>
+
+    <div class = "navbar-header pull-right">
+      <p class="navbar-btn">
+        <a href="/signup"><button class="btn btn-default">Sign Up</button></a>
+        <a href = "#signin" data-toggle = "modal"><button class="btn btn-default">Log In</button></a>
+      </p>
+    </div>
+  </div>
+  <div class = "jumbotron">
+    <span class="StreamsHero-header">See whats happening right now!</span></br>
+    <span class="StreamsHero-blurb">Find community, conversation and inspiration about the things you love.</span></br>
+  </div>
+</div>
+<top-nav></top-nav>
+<div class = "modal fade" id = "signin" role = "dialog">
+  <div class = "modal-dialog">
+    <div class = "modal-content">
+      <form class = "form-horizontal">
+        <div class = "modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span></button>
+          <center><h3 class="lead">Log in to Twitter</h3></center>
+        </div>
+        <div class = "modal-body">
+          <div class = "form-group">
+            <div class = "col-md-offset-1 col-md-10">
+              <input type = "email" placeholder = "Email" id="email" name = "email" class = "form-control" required>
+            </div>
+          </div>
+          <div class = "form-group">
+            <div class = "col-md-offset-1 col-md-10">
+              <input type = password placeholder = "Password" id = "password" name = "password" class = "form-control" required>
+
+            </div>
+          </div>
+          <div class = "form-group">
+            <div class = "col-md-offset-1 col-md-10">
+              <button type = "button" name = "signInBtn" class = "btn btn-primary form-control" ng-click="login()"> Sign in </button>
+            </div>
+          </div>
+          <p class="bg-warning" ng-hide="invalidLogin">Invalid Input</p>
+        </div>
+      </form>
+      <div class = "modal-footer">
+        <p class="text-center">Don't have an account? <a href="/signup"><i>Sign Up!</i></a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+<script src="javascripts/TwitterMainAngularModule.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="javascripts/bootstrap.min.js"></script>
+</html>

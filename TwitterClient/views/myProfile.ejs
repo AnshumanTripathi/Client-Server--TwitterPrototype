@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html ng-app="myProfile">
+<head>
+    <meta name = "viewport" content = "width = device-width , initial-scale=1.0">
+    <link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="../stylesheets/profileStyle.css" rel="stylesheet">
+    <script src="../javascripts/angular.min.js"></script>
+</head>
+<body ng-controller="ProfileController">
+<div class = "navbar navbar-default navbar-static-top">
+    <div class = "navbar-header">
+
+        <ul class = "nav navbar-nav navbar-right">
+            <li><a href = "/goToLogin"><span class="glyphicon glyphicon-home pull-left"> Home</span></a></li>
+            <li><a href = "/editProfile"><span class="glyphicon glyphicon-flash pull-left"> Edit Profile</span></a></li>
+            <li><a href = "#"><span class="glyphicon glyphicon-bell pull-left"> Notifications</span></a></li>
+            <li><a href = "#"><span class="glyphicon glyphicon-envelope pull-left"> Messages</span></a></li>
+        </ul>
+    </div>
+
+    <p class="navbar-btn pull-right">
+        <a href="#tweet" data-toggle="modal">
+            <button class="btn btn-primary">
+                <span class="glyphicon glyphicon-pencil"> Tweet</span>
+            </button>
+        </a>
+        <button class="btn btn-danger" ng-click="logout()">
+            Logout
+        </button>
+
+    </p>
+    <div class="pull-right">
+        <form class="navbar-form" role="search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="search" ng-model="search" ng-keyup="searchUsers()" autocomplete="off">
+                <div class="search-suggestions" id="suggestions">
+                    <table class="table table-condensed">
+                        <tr ng-repeat="results in searchResults">
+                            <td>
+                                <a href="/getProfile/{{results.ID}}">{{results.username}}</a><br/>
+                                {{results.tweet}}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit" ng-click="searchUsers()"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class = "jumbotron">
+
+</div>
+
+<div class="container" ng-init="getCurrentUser()">
+    <div class="row col-md-3">
+        <img src="http://whiskeyreviewer.com/wp-content/uploads/2015/07/amanda_cerny_1.jpg" class="ProfileAvatar-image ProfileAvatar-placeholderImage img-thumbnail">
+        <p class="text-center"><strong>{{results}}</strong></p>
+        <p class="text-center"><strong>{{email}}</strong></p>
+        <p class="text-center"><strong><span class="glyphicon glyphicon-calendar"></span>  {{dob | date}}</strong></p>
+    </div>
+    <div class="col-lg-9">
+        <table class="table-condensed" ng-init="getMyTweets()">
+            <thead>
+            <th>
+                <p ng-model="results">
+                    Tweets by {{results}}
+                </p>
+            </th>
+            </thead>
+            <tbody ng-repeat="tweet in allTweets track by $index">
+            <tr class="tweets-row">
+                <td rowspan="3">
+                    <img class="avatar" src="http://whiskeyreviewer.com/wp-content/uploads/2015/07/amanda_cerny_1.jpg" class="avatar">
+                </td>
+                <td>
+                    <strong>{{myUsername}}</strong>
+                </td>
+            </tr>
+            <tr class="tweets-row">
+                <td colspan="2">
+                    {{tweet}}
+                    <input type="hidden" id="hiddenTweet" value = {{tweet}}>
+                </td>
+            </tr>
+            <tr>
+                <td class ="share-buttons">
+                    <span class="glyphicon glyphicon-share-alt" ng-click = "retweet()"></span>
+                </td>
+                <td>
+                    <span class="glyphicon glyphicon-retweet" ng-click = "retweet()"></span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../javascripts/bootstrap.min.js"></script>
+<script src="../javascripts/myProfileHandler.js"></script>
+</html>

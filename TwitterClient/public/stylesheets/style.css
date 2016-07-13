@@ -1,0 +1,71 @@
+.navbar{
+    background-image: url("https://abs.twimg.com/a/1457056025/img/t1/lohp_streams_header_bg_v4.png");
+    color: white;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: -15px;
+}
+.navbar-default .navbar-brand {
+    color: white;
+    font-weight: 400;
+}
+
+.navbar-header.pull-left{
+    background-image: url("https://abs.twimg.com/a/1457056025/img/t1/lohp_streams_header_bg_v4.png");
+    color: white;
+}
+
+.jumbotron{
+    background-image: url("https://abs.twimg.com/a/1457056025/img/t1/lohp_streams_header_bg_v4.png");
+    color: white;
+    text-align: center;
+}
+
+.btn-default{
+    background-image: url("https://abs.twimg.com/a/1457056025/img/t1/lohp_streams_header_bg_v4.png");
+    color: white;
+    border-color: white;
+}
+.btn-default:hover{
+    color: #0e90d2;
+    background-color: white;
+    background-image: url("");
+}
+.StreamsHero-header {
+    color: #fff;
+    font-weight: 200;
+    line-height: 48px;
+
+    font-size: 32px;
+}
+
+.Icon{
+    top: 10px;
+}
+
+.nav-tabs > li, .nav-tabs > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-tabs {
+    top: 0px;
+    text-align:center;
+}
+
+.StreamsHero-blurb {
+    color: #fff;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 28px;
+    opacity: .7;
+    -ms-filter: "alpha(opacity=70)";
+    transition: opacity 300ms linear;
+}
+
+.form-group{
+    padding-top: 20px;
+}

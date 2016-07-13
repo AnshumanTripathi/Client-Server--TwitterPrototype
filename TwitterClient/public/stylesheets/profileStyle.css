@@ -1,0 +1,80 @@
+.jumbotron{
+    background-image: url("https://abs.twimg.com/a/1457056025/img/t1/lohp_streams_header_bg_v4.png");
+    margin-top: 0px;
+    text-align: center;
+
+}
+
+.navbar-default .navbar-nav>li>a{
+
+    color: #777777;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
+
+.search-suggestions {
+    margin-top: 30px;
+    z-index: 100;
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+}
+
+.tweets-table{
+    margin-top: 20px;
+    margin-left: -25px;
+    border-collapse: separate;
+}
+
+table{
+    margin-top: 20px;
+    border-collapse: separate;
+}
+
+tr{
+    display: block;
+}
+.table-hover>tbody>tr>td{
+    padding: 10px;
+}
+
+
+.tweet{
+    margin-left: 8px;
+    margin-top: 0px;
+}
+
+.tweets-table{
+    margin-top: 20px;
+    margin-left: -25px;
+    border-collapse: separate;
+}
+
+.tweets-row{
+    background-color: #c4e3f3;
+    width: 750px;
+}
+
+.profile-tabs{
+    color: #0b97c4;
+}
+.avatar{
+    height: 48px;
+    border-radius: 5px;
+    -moz-force-broken-image-icon: 1;
+}
+.share-buttons{
+    width: 20%;
+}
+
+
+.profileAvatar{
+    width: 90%;
+    margin-top: -70px;
+    border-radius: 8px;
+}
